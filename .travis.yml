@@ -20,9 +20,6 @@ install:
   - node -v
   - npm i -g yarn
   - yarn
-script:
-  - yarn lint
-  - yarn test
 services:
   - postgresql
 addons:
