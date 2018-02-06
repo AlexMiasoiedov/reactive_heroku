@@ -8,3 +8,5 @@ deploy:
   app: reactive-heroku-app
   on:
     repo: AlexMiasoiedov/reactive_heroku
+services:
+  - postgresql
