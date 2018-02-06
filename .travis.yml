@@ -10,8 +10,7 @@ deploy:
     repo: AlexMiasoiedov/reactive_heroku
 services:
   - postgresql
-
+addons:
+  postgresql: "9.3"
 before_script:
-- psql -c "CREATE ROLE reactiveheroku WITH LOGIN CREATEDB PASSWORD '';" -U postgres
-- psql -c 'CREATE DATABASE reactiveherokutest;' -U postgres
-- psql -c 'CREATE DATABASE reactiveherokuprod;' -U postgres
+  - cp config/database.yml.travis config/database.yml
