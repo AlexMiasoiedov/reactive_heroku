@@ -10,3 +10,6 @@ deploy:
     repo: AlexMiasoiedov/reactive_heroku
 services:
   - postgresql
+
+before_script:
+- psql -c "CREATE ROLE reactiveheroku WITH LOGIN CREATEDB PASSWORD '';" -U postgres
